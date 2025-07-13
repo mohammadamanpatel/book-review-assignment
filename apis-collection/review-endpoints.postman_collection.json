@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "75ba1573-d6e3-4cf1-bc08-6f6ad52bfe35",
+		"name": "review-endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30730048",
+		"_collection_link": "https://www.postman.com/amans-team-4963/workspace/book-review-system-apis/collection/30730048-75ba1573-d6e3-4cf1-bc08-6f6ad52bfe35?action=share&source=collection_link&creator=30730048"
+	},
+	"item": [
+		{
+			"name": "createReview",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "<jwt-along-with-bearer>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"rating\": 4,\r\n  \"comment\": \"Very insightful and well-written!\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:6000/api/v1/books/<book-id>/reviews",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"api",
+						"v1",
+						"books",
+						"<book-id>",
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteReview",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "<jwt-along-with-bearer>",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:6000/api/v1/reviews/<review-id>",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"api",
+						"v1",
+						"reviews",
+						"<review-id>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateReview",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "<jwt-along-with-bearer>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"rating\": 5,\r\n  \"comment\": \"Very insightful\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:6000/api/v1/reviews/<review-id>",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"api",
+						"v1",
+						"reviews",
+						"<review-id>"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

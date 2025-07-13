@@ -1,0 +1,103 @@
+{
+  "info": {
+    "_postman_id": "f005dafc-368c-4005-8816-38d5721d102b",
+    "name": "book-endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "createBook",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Atomic Habits\",\n  \"author\": \"James Clear\",\n  \"genre\": \"Self-help\",\n  \"description\": \"An easy & proven way to build good habits & break bad ones.\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:6000/api/v1/books",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "6000",
+          "path": ["api", "v1", "books"]
+        }
+      }
+    },
+    {
+      "name": "getAllBooks",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:6000/api/v1/books?page=1&limit=2&author={{searchAuthorOrTitle}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "6000",
+          "path": ["api", "v1", "books"],
+          "query": [
+            { "key": "page", "value": "1" },
+            { "key": "limit", "value": "2" },
+            { "key": "author", "value": "{{searchAuthorOrTitle}}" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "getBookById",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:6000/api/v1/books/{{bookId}}?page=1&limit=5",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "6000",
+          "path": ["api", "v1", "books", "{{bookId}}"],
+          "query": [
+            { "key": "page", "value": "1" },
+            { "key": "limit", "value": "5" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "searchBook",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:6000/api/v1/books/search/{{keyword}}?searchQuery={{query}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "6000",
+          "path": ["api", "v1", "books", "search", "{{keyword}}"],
+          "query": [
+            { "key": "searchQuery", "value": "{{query}}" }
+          ]
+        }
+      }
+    }
+  ]
+}

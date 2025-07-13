@@ -1,0 +1,55 @@
+{
+  "info": {
+    "_postman_id": "319b354b-0548-4dba-b390-55276bcccc50",
+    "name": "auth-endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "signup",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"aman2003\",\n    \"email\": \"aman@2003.in\",\n    \"password\": \"password123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:6000/api/v1/auth/signup",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "6000",
+          "path": ["api", "v1", "auth", "signup"]
+        }
+      }
+    },
+    {
+      "name": "login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"aman@2003.in\",\n    \"password\": \"password123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:6000/api/v1/auth/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "6000",
+          "path": ["api", "v1", "auth", "login"]
+        }
+      }
+    }
+  ]
+}
