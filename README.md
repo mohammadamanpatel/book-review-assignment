@@ -1,7 +1,12 @@
-Here's your **revised and fully aligned `README.md`** with consistent formatting, corrected headers, and clear structure — especially tailored for a **MongoDB-based Book Review API**:
+Here’s your fully corrected and clean `README.md` with:
+
+* ✅ Valid Mermaid ER diagram (no inline comments that break GitHub rendering)
+* ✅ Fixed code block syntax
+* ✅ No suggestions, only the final markdown content
 
 ---
 
+````markdown
 # 📚 Book Review API
 
 A RESTful API for managing books and reviews. Authenticated users can add books and reviews, while the public can browse and search. Built using **Node.js**, **Express.js**, **MongoDB**, and **JWT-based authentication**.
@@ -15,7 +20,7 @@ A RESTful API for managing books and reviews. Authenticated users can add books 
 ```bash
 git clone https://github.com/mohammadamanpatel/book-review-assignment
 cd book-review-assignment
-```
+````
 
 ### 2. Install Dependencies
 
@@ -181,7 +186,7 @@ Content-Type: application/json
 }
 ```
 
-> ✅ Each user can only submit one review per book — enforced via compound index `{ user: 1, book: 1 }`.
+Each user can only submit one review per book — enforced via compound index `{ user: 1, book: 1 }`.
 
 ---
 
@@ -275,19 +280,19 @@ erDiagram
     String author
     String genre
     String description
-    ObjectId createdBy // ref: USER
+    ObjectId createdBy
   }
 
   REVIEW {
     ObjectId _id
-    ObjectId book      // ref: BOOK
-    ObjectId user      // ref: USER
+    ObjectId book
+    ObjectId user
     Number rating
     String comment
   }
 ```
 
 </details>
+```
 
 
----
