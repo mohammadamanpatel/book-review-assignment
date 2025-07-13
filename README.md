@@ -3,7 +3,7 @@
 ````markdown
 # 📚 Book Review API
 
-A RESTful API for managing books and reviews. Authenticated users can add books and reviews, while the public can browse and search. Built using **Node.js**, **Express.js**, **MongoDB**, and **JWT-based authentication**.
+A RESTful API for managing books and reviews. Authenticated users can add books and reviews, while the public can browse and search. Built using Node.js, Express.js, MongoDB, and JWT-based authentication.
 
 ---
 
