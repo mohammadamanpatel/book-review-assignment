@@ -7,22 +7,22 @@ A RESTful API for managing books and reviews. Authenticated users can add books 
 
 ---
 
-## 🛠️ Setup Instructions
+🛠️ Setup Instructions
 
-### 1. Clone the Repository
+1. Clone the Repository
 
 ```bash
 git clone https://github.com/mohammadamanpatel/book-review-assignment
 cd book-review-assignment
 ````
 
-### 2. Install Dependencies
+2. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Configure Environment Variables
+3. Configure Environment Variables
 
 Create a `.env` file in the root directory:
 
@@ -33,7 +33,7 @@ JWT_SECRET=your_jwt_secret
 JWT_EXPIRY=your_jwt_expiry
 ```
 
-### 4. Run the Project
+4. Run the Project
 
 ```bash
 npm run dev
@@ -44,13 +44,13 @@ Server will be running at:
 
 ---
 
-## 🌐 API Endpoints
+🌐 API Endpoints
 
 Base URL: `http://localhost:5000/api/v1`
 
 ---
 
-### 🔐 Auth Routes `/auth`
+🔐 Auth Routes `/auth`
 
 | Method | Endpoint  | Description             |
 | ------ | --------- | ----------------------- |
@@ -72,7 +72,7 @@ Content-Type: application/json
 
 ---
 
-### 📘 Book Routes `/books`
+📘 Book Routes `/books`
 
 | Method | Endpoint       | Auth | Description                          |
 | ------ | -------------- | ---- | ------------------------------------ |
@@ -81,7 +81,7 @@ Content-Type: application/json
 | GET    | `/:id`         | ❌    | Get a book by ID with reviews        |
 | GET    | `/search/book` | ❌    | Search books by title or author      |
 
-#### Example
+Example
 
 ```bash
 POST /api/v1/books
@@ -102,7 +102,7 @@ GET /api/v1/books?author=james&genre=selfhelp&page=1&limit=5
 
 ---
 
-### ✍️ Review Routes
+✍️ Review Routes
 
 | Method | Endpoint             | Auth | Description            |
 | ------ | -------------------- | ---- | ---------------------- |
@@ -110,7 +110,7 @@ GET /api/v1/books?author=james&genre=selfhelp&page=1&limit=5
 | PUT    | `/reviews/:ReviewId` | ✅    | Update your review     |
 | DELETE | `/reviews/:reviewId` | ✅    | Delete your review     |
 
-#### Example
+Example
 
 ```bash
 POST /api/v1/books/64f92b4e1fc0/reviews
@@ -136,9 +136,9 @@ Content-Type: application/json
 
 ---
 
-## 🧱 Database Schema
+🧱 Database Schema
 
-### 🧑 User
+🧑 User
 
 ```js
 {
@@ -151,7 +151,7 @@ Content-Type: application/json
 }
 ```
 
-### 📕 Book
+📕 Book
 
 ```js
 {
@@ -166,7 +166,7 @@ Content-Type: application/json
 }
 ```
 
-### ✍️ Review
+✍️ Review
 
 ```js
 {
@@ -184,7 +184,7 @@ Each user can only submit one review per book — enforced via compound index `{
 
 ---
 
-## 📌 Design Decisions & Assumptions
+📌 Design Decisions & Assumptions
 
 * JWT is used for stateless authentication (`Authorization: Bearer <token>`).
 * Passwords are hashed securely using `bcrypt`.
@@ -195,7 +195,7 @@ Each user can only submit one review per book — enforced via compound index `{
 
 ---
 
-## 📂 Folder Structure (Simplified)
+📂 Folder Structure (Simplified)
 
 ```
 src/
@@ -232,14 +232,14 @@ src/
 
 ---
 
-## 🧪 Testing
+🧪 Testing
 
 Use **Postman** or **curl** for testing routes.
 Make sure to include the `Authorization` header with your JWT token for protected routes.
 
 ---
 
-## 📌 Example `.env`
+📌 Example `.env`
 
 ```
 PORT=5000
@@ -250,7 +250,7 @@ JWT_EXPIRY=1d
 
 ---
 
-## 🧭 Entity Relationship Diagram (Mermaid)
+🧭 Entity Relationship Diagram (Mermaid)
 
 <details>
 <summary><strong>Click to expand Mermaid ER Diagram</strong></summary>
