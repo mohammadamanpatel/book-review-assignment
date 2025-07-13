@@ -1,8 +1,3 @@
-Here’s your fully corrected and clean `README.md` with:
-
-* ✅ Valid Mermaid ER diagram (no inline comments that break GitHub rendering)
-* ✅ Fixed code block syntax
-* ✅ No suggestions, only the final markdown content
 
 ---
 
